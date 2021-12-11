@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">My Awesome Admin Panel</a></h1>
+<!-- to override the title of the admin panel in actual project: https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#django.contrib.admin.AdminSite.site_header -->
+<!-- admin/index.html: app_list variable -->
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
